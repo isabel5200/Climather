@@ -1,0 +1,66 @@
+<div id="details-widget" class="weather-widget widget-background-default mb-5">
+    <div id="particles-js">
+    </div>
+
+    <div class="weather-details">
+        <div class="widget-head">
+            <div class="location">
+                <h2>{{ location.name }}, {{ location.region }}, {{ location.country }}</h2>
+                <p>{{ formattedDate }}</p>
+            </div>
+
+            <div class="air-quality">
+                {{#if (eq current.air_quality.us-epa-index 1)}}
+                <p class="details-titles">
+                    <i class="bi bi-circle-fill" style="color: #7be665;"></i>
+                    Good
+                </p>
+                {{else if (eq current.air_quality.us-epa-index 2)}}
+                <i class="bi bi-circle-fill" style="color: #c8ff00;"></i>
+                <p class="details-titles">Moderate</p>
+                {{else if (eq current.air_quality.us-epa-index 3)}}
+                <i class="bi bi-circle-fill" style="color: #e4e665;"></i>
+                <p class="details-titles">Unhealthy for sensitive groups</p>
+                {{else if (eq current.air_quality.us-epa-index 4)}}
+                <i class="bi bi-circle-fill" style="color: #e6d365;"></i>
+                <p class="details-titles">Unhealthy</p>
+                {{else if (eq current.air_quality.us-epa-index 5)}}
+                <i class="bi bi-circle-fill" style="color: #ffae00;"></i>
+                <p class="details-titles">Very unhealthy</p>
+                {{else if (eq current.air_quality.us-epa-index 6)}}
+                <i class="bi bi-circle-fill" style="color: #ee0a0a;"></i>
+                <p class="details-titles">Hazardous</p>
+                {{else}}
+                <p class="details-titles">No data</p>
+                {{/if}}
+                <p>Air quality</p>
+            </div>
+        </div>
+
+        <div class="details">
+            <p>
+                <span class="details-titles">Humidity: </span>
+                <span>{{ current.humidity }}%</span>
+            </p>
+            <p>
+                <span class="details-titles">Wind: </span>
+                <span>{{ current.wind_kph }} km/h ({{ current.wind_dir }})</span>
+            </p>
+            <p>
+                <span class="details-titles">Feels like: </span>
+                <span class="fahrenheit">{{ current.feelslike_f }}°F</span>
+                <span class="celsius hidden">{{ current.feelslike_c }}°C</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="weather-condition">
+        <img src="{{ current.condition.icon }}" alt="{{ current.condition.text }}" />
+
+        <div class="temp">
+            <span class="fahrenheit">{{ current.temp_f }} °F</span>
+            <span class="celsius hidden">{{ current.temp_c }} °C</span>
+            <p>{{ current.condition.text }}</p>
+        </div>
+    </div>
+</div>

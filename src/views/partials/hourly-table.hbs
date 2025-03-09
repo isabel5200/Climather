@@ -1,0 +1,100 @@
+<div id="forecast-table" class="mb-5 table-responsive-md">
+    <table class="table table-light table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Hour</th>
+                {{#each HourForecast}}
+                <th scope="col">{{ time }}</th>
+                {{/each}}
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Weather</th>
+                {{#each HourForecast}}
+                <td>
+                    <img src="{{ conditionIcon }}" alt="{{ conditionText }}" />
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Temp</th>
+                {{#each HourForecast}}
+                <td class="fahrenheit temp-f">
+                    {{ temp_f }}°F
+                </td>
+                <td class="celsius hidden temp-c">
+                    {{ temp_c }}°C
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Feels</th>
+                {{#each HourForecast}}
+                <td class="fahrenheit temp-f">
+                    {{ feelslike_f }}°F
+                </td>
+                <td class="celsius hidden temp-c">
+                    {{ feelslike_c }}°C
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Wind</th>
+                {{#each HourForecast}}
+                <td class="wind">
+                    {{ wind_kph }} kmph
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Dir</th>
+                {{#each HourForecast}}
+                <td class="precip">
+                    {{ wind_dir }}
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Gust</th>
+                {{#each HourForecast}}
+                <td class="gust">
+                    {{ gust_kph }} kmph
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Precip</th>
+                {{#each HourForecast}}
+                <td class="pressure">
+                    {{ precip_mm }} mm
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Cloud</th>
+                {{#each HourForecast}}
+                <td>
+                    {{ cloud }}%
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Humidity</th>
+                {{#each HourForecast}}
+                <td>
+                    {{ humidity }}%
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Pressure</th>
+                {{#each HourForecast}}
+                <td>
+                    {{ pressure_mb }} mb
+                </td>
+                {{/each}}
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,16 @@
+<footer class="bg-body-tertiary text-center py-3 mt-auto" data-bs-theme="dark">
+    <p class="m-0 small text-white">Created by
+        <a class="text-decoration-none fw-semibold link-light" href="#">
+            Isabel Lovera
+        </a>
+        using
+        <a href="https://www.weatherapi.com/" class="text-decoration-none fw-semibold link-light" target="_blank">
+            Free WeatherAPI
+        </a>
+        &copy; <span id="year"></span>
+    </p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>

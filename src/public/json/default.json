@@ -1,0 +1,39 @@
+{
+  "particles": {
+    "number": {
+      "value": 50
+    },
+    "size": {
+      "value": 5,
+      "random": true
+    },
+    "color": {
+      "value": "#cccccc"
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": true
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.5,
+      "direction": "none",
+      "random": true,
+      "straight": false
+    },
+    "line_linked": {
+      "enable": false
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": false
+      },
+      "onclick": {
+        "enable": false
+      }
+    }
+  },
+  "detectRetina": true
+}

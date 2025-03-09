@@ -1,0 +1,130 @@
+<div id="forecast-table" class="mb-5 table-responsive-md">
+    <h2 class="mb-3">3-Day Weather Forecast</h2>
+
+    <table class="table table-light table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Day</th>
+                {{#each forecast}}
+                <th scope="col">
+                    <a href="/forecastPerHour?day={{ dayNumber }}&lat={{ lat }}&lon={{ lon }}">
+                        {{ dayOfWeek }}
+                    </a>
+                </th>
+                {{/each}}
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Weather</th>
+                {{#each forecast}}
+                <td>
+                    <img src="{{ conditionIcon }}" alt="{{ conditionText }}" />
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Max</th>
+                {{#each forecast}}
+                <td class="fahrenheit temp-f">
+                    {{ maxtemp_f }}°F
+                </td>
+                <td class="celsius hidden temp-c">
+                    {{ maxtemp_c }}°C
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Min</th>
+                {{#each forecast}}
+                <td class="fahrenheit temp-f">
+                    {{ mintemp_f }}°F
+                </td>
+                <td class="celsius hidden temp-c">
+                    {{ mintemp_c }}°C
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Wind</th>
+                {{#each forecast}}
+                <td class="wind">
+                    {{ maxwind_kph }}
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Precip</th>
+                {{#each forecast}}
+                <td class="precip">
+                    {{ totalprecip_in }} in
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Humidity</th>
+                {{#each forecast}}
+                <td>
+                    {{ avghumidity }}%
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Sunrise</th>
+                {{#each forecast}}
+                <td>
+                    {{ sunrise }}
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Sunset</th>
+                {{#each forecast}}
+                <td>
+                    {{ sunset }}
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Moonrise</th>
+                {{#each forecast}}
+                <td>
+                    {{ moonrise }}
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Moonset</th>
+                {{#each forecast}}
+                <td>
+                    {{ moonset }}
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Phase</th>
+                {{#each forecast}}
+                <td>
+                    {{ moon_phase }}
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">Illum</th>
+                {{#each forecast}}
+                <td>
+                    {{ moon_illumination }}
+                </td>
+                {{/each}}
+            </tr>
+            <tr>
+                <th scope="row">UV</th>
+                {{#each forecast}}
+                <td>
+                    {{ uv }}
+                </td>
+                {{/each}}
+            </tr>
+        </tbody>
+    </table>
+</div>

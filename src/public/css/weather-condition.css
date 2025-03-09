@@ -1,0 +1,179 @@
+.widget-background-default {
+    background: linear-gradient(to bottom, #b0c4de, #778899);
+    color: #333;
+}
+
+.sunny {
+    background: linear-gradient(to bottom, #ffcc00, #ff9900);
+    color: #333;
+}
+
+.clear {
+    background: linear-gradient(to bottom, #001e3c, #000141);
+    color: #ffffff;
+}
+
+.partly-cloudy {
+    background: linear-gradient(to bottom, #d3d3d3, #a0a0a0);
+    color: #333;
+}
+
+.partly-cloudy-night {
+    background: linear-gradient(to bottom, #2c3e50, #1a252f);
+    color: #ffffff;
+}
+
+.cloudy {
+    background: linear-gradient(to bottom, #a0a0a0, #696969);
+    color: #333;
+}
+
+.cloudy-night {
+    background: linear-gradient(to bottom, #343a40, #1a1a1a);
+    color: #ffffff;
+}
+
+.moderate-rain {
+    background: linear-gradient(to bottom, #6fa3ef, #4a69bb);
+    color: #333;
+}
+
+.moderate-rain-night {
+    background: linear-gradient(to bottom, #34495e, #2c3e50);
+    color: #ffffff;
+}
+
+.heavy-rain {
+    background: linear-gradient(to bottom, #4a69bb, #2c3e50);
+    color: #ffffff;
+}
+
+.heavy-rain-night {
+    background: linear-gradient(to bottom, #1a252f, #0a1a2f);
+    color: #ffffff;
+}
+
+.fog {
+    background: linear-gradient(to bottom, #d1d1d1, #b0b0b0);
+    color: #333;
+}
+
+.fog-night {
+    background: linear-gradient(to bottom, #696969, #4a4a4a);
+    color: #ffffff;
+}
+
+.light-snow {
+    background: linear-gradient(to bottom, #e0f7fa, #b3e5fc);
+    color: #333;
+}
+
+.light-snow-night {
+    background: linear-gradient(to bottom, #78909c, #546e7a);
+    color: #ffffff;
+}
+
+.heavy-snow {
+    background: linear-gradient(to bottom, #ffffff, #cfd8dc);
+    color: #333;
+}
+
+.heavy-snow-night {
+    background: linear-gradient(to bottom, #90a4ae, #607d8b);
+    color: #ffffff;
+}
+
+.snowstorm {
+    background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+    color: #333;
+}
+
+.snowstorm-night {
+    background: linear-gradient(to bottom, #546e7a, #37474f);
+    color: #ffffff;
+}
+
+.blizzard {
+    background: linear-gradient(to bottom, #87a7c5, #4b6479);
+    color: #ffffff;
+}
+
+.blizzard-night {
+    background: linear-gradient(to bottom, #4b6479, #1e2d3d);
+    /* Azul oscuro con gris */
+    color: #ffffff;
+}
+
+.hail {
+    background: linear-gradient(to bottom, #e0e0e0, #bdbdbd);
+    color: #333;
+}
+
+.hail-night {
+    background: linear-gradient(to bottom, #757575, #616161);
+    color: #ffffff;
+}
+
+.thunderstorms {
+    background: linear-gradient(to bottom, #3a3a3a, #0a0a0a);
+    animation: lightning-flash 3s infinite ease-in-out;
+    color: #ffffff;
+    position: relative;
+}
+
+.thunderstorms::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    animation: flash-effect 3s infinite ease-in-out;
+}
+
+@keyframes lightning-flash {
+
+    0%,
+    100% {
+        filter: brightness(1);
+    }
+
+    30% {
+        filter: brightness(2.5);
+    }
+
+    31% {
+        filter: brightness(1);
+    }
+
+    32% {
+        filter: brightness(2);
+    }
+
+    33% {
+        filter: brightness(1);
+    }
+
+    70% {
+        filter: brightness(2);
+    }
+
+    71% {
+        filter: brightness(1);
+    }
+}
+
+@keyframes flash-effect {
+
+    25%,
+    50% {
+        opacity: 0.8;
+    }
+
+    26%,
+    51% {
+        opacity: 0;
+    }
+}

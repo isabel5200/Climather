@@ -1,0 +1,69 @@
+<div id="today-weather" class="mb-4 table-responsive-md">
+    <table class="table table-secondary table-hover">
+        <tbody>
+            <tr>
+                <th scope="row">Sunrise</th>
+                <td>
+                    {{ todayForecast.sunrise }}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Sunset</th>
+                <td>
+                    {{ todayForecast.sunset }}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Moonrise</th>
+                <td>
+                    {{ todayForecast.moonrise }}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Moonset</th>
+                <td>
+                    {{ todayForecast.moonset }}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Max</th>
+                <td class="fahrenheit temp-f">
+                    {{ todayForecast.maxtemp_f }}°F
+                </td>
+                <td class="celsius hidden temp-c">
+                    {{ todayForecast.maxtemp_c }}°C
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Min</th>
+                <td class="fahrenheit temp-f">
+                    {{ todayForecast.mintemp_f }}°F
+                </td>
+                <td class="celsius hidden temp-c">
+                    {{ todayForecast.mintemp_c }}°C
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Avg</th>
+                <td class="fahrenheit temp-f">
+                    {{ todayForecast.avgtemp_f }}°F
+                </td>
+                <td class="celsius hidden temp-c">
+                    {{ todayForecast.avgtemp_c }}°C
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Precip</th>
+                <td class="precip">
+                    {{ todayForecast.totalprecip_mm }} mm
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Max Wind</th>
+                <td class="wind">
+                    {{ todayForecast.maxwind_kph }} kmph
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

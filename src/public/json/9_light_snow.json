@@ -1,0 +1,38 @@
+{
+  "particles": {
+    "number": {
+      "value": 100
+    },
+    "size": {
+      "value": 3
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "opacity": {
+      "value": 0.7
+    },
+    "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "bottom"
+    },
+    "line_linked": {
+      "enable": false
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": false
+      },
+      "onclick": {
+        "enable": false
+      }
+    }
+  },
+  "detectRetina": true,
+  "background": {
+    "color": "#000000"
+  }
+}

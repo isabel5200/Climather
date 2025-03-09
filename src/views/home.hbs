@@ -1,0 +1,43 @@
+{{> navbar}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex align-items-center justify-content-center mt-5">
+                <img src="/img/icons/sun.svg" alt="Logo" width="50" height="50" class="d-inline">
+                <h1 class="ms-3">Climather</h1>
+            </div>
+            <p class="text-center">The best app to check the weather in your city!</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <form id="search" class="d-flex" role="search">
+                <input id="search-input" class="form-control me-2" type="search" placeholder="Search a city">
+                {{!-- <button class="btn btn-primary" type="submit">Search</button> --}}
+            </form>
+
+            <div id="autocomplete-results" class="list-group"></div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="d-flex mt-5">
+                <h2>Recent searches</h2>
+            </div>
+
+            <div class="mt-3">
+                <div class="card">
+                    <ul class="list-group list-group-flush" id="recent-searches">
+                        {{!-- Recent searches will appear here --}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- Search script --}}
+<script src="/js/search.js"></script>

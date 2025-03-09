@@ -1,0 +1,54 @@
+{{> navbar}}
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<link rel="stylesheet" href="/css/animations.css">
+<link rel="stylesheet" href="/css/widget.css">
+<link rel="stylesheet" href="/css/weather-condition.css">
+<link rel="stylesheet" href="/css/map.css">
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mt-5">Current Weather</h2>
+            {{!-- Toggle buttons --}}
+            {{> toggle-buttons}}
+            {{!-- Weather widget --}}
+            {{> weather-widget }}
+            {{!-- Table --}}
+            {{> 3-day-table}}
+            {{!-- Map --}}
+            {{> map}}
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="/js/tempToggle.js"></script>
+<script src="/js/particles.js"></script>
+<script src="/js/widget-background.js"></script>
+<script src="/js/cellColor.js"></script>
+
+<script type="text/javascript">
+    // Load particles and change background color
+    const conditionId = "{{ current.condition.code }}";
+    const conditionName = "{{ current.condition.text }}";
+    const isDay = "{{ current.is_day }}";
+    const latitude = "{{ location.lat }}"
+    const longitude = "{{ location.lon }}"
+    const map = L.map('map').setView([latitude, longitude], 13);
+    const marker = L.marker([latitude, longitude]).addTo(map);
+
+    if (conditionName && conditionName.trim() !== "") {
+        loadParticles(conditionName);
+        changeBackgroundColor(conditionName, isDay);
+    }
+
+    // Add map
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+</script>

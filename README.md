@@ -41,7 +41,7 @@ The goal of this project is to learn how to implement an external API.
     npm run dev
     ````
 
-⚠️ Note
+## ⚠️ Note
 This project is for learning and portfolio purposes only.
 ________________________________________
 Made with ❤️ by Isabel Lovera
